@@ -4,6 +4,8 @@ A deep learning Chinese Word Segmentation toolkit
 
 # Usage
 
+code example:
+
 ```
 # -*- encoding:utf-8 -*-
 from deepseg import DeepSeg
@@ -37,10 +39,14 @@ output:
 
 # Run Tests
 
+```
 python -m unittest tests.test_deepseg.DeepsegTest
 python -m unittest tests.test_deepseg_util.DeepsegUtilTest
+```
 
 # Check PEP8
 
+```
 pep8 *.py --ignore=E501
 pep8 tests/*.py --ignore=E501
+```
