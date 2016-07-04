@@ -22,8 +22,8 @@ install:
   - pip install codecov
 
 script:
-  - python -m unittest tests.test_deepseg.DeepsegTest
-  - python -m unittest tests.test_deepseg_util.DeepsegUtilTest
+  - coverage run -m unittest tests.test_deepseg.DeepsegTest
+  - coverage run -m unittest tests.test_deepseg_util.DeepsegUtilTest
 
 after_success:
   - codecov
