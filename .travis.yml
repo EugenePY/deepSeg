@@ -1,0 +1,33 @@
+language: python
+
+sudo: false
+
+python:
+  - "2.7"
+  - "3.3"
+  - "3.4"
+
+addons:
+  apt:
+    packages:
+      - libblas-dev
+      - liblapack-dev
+      - gfortran
+
+before_install:
+  - pip install -U pip setuptools wheel
+
+install:
+  - pip install -r requirements_test.txt
+  - pip install codecov
+
+script:
+  - python -m unittest tests.test_deepseg.DeepsegTest
+  - python -m unittest tests.test_deepseg_util.DeepsegUtilTest
+
+after_success:
+  - codecov
+
+notifications:
+  email:
+    - fukuball@gmail.com
