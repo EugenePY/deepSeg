@@ -22,8 +22,9 @@ install:
   - pip install codecov
 
 script:
-  - coverage run -m unittest tests.test_deepseg.DeepsegTest
-  - coverage run -m unittest tests.test_deepseg_util.DeepsegUtilTest
+  - pep8 *.py --ignore=E501
+  - pep8 tests/*.py --ignore=E501
+  - coverage run -m unittest tests.test_deepseg.DeepsegTest tests.test_deepseg_util.DeepsegUtilTest
 
 after_success:
   - codecov
