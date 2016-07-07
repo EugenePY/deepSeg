@@ -1,5 +1,8 @@
 # deepSeg
 
+[![Build Status](https://travis-ci.org/fukuball/deepSeg.svg?branch=master)](https://travis-ci.org/fukuball/deepSeg)
+[![codecov](https://codecov.io/gh/fukuball/deepSeg/branch/master/graph/badge.svg)](https://codecov.io/gh/fukuball/deepSeg)
+
 A deep learning Chinese Word Segmentation toolkit
 
 # Usage
